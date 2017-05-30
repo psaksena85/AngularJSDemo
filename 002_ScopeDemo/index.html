@@ -1,0 +1,24 @@
+<!DOCTYPE <html>
+<html>
+
+<head>
+    <title>Scope Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="js/apps.js"></script>
+</head>
+
+<body ng-app="scopeDemo">
+    <div ng-controller="scopeCtrl1">
+        <h3>Implicit Usage of scope</h3>
+        <span>{{ name }}</span><br>
+        <span>{{ address }}</span>
+    </div>
+
+    <div ng-controller="scopeCtrl2 as ctrl">
+        <h3>Explicit Usage of scope</h3>
+        <span>{{ ctrl.name }}</span><br>
+        <span>{{ ctrl.address }}</span>
+    </div>
+</body>
+
+</html>
